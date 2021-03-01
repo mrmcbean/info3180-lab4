@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1> Files Uploaded </h1>
+
+<p>This page displays files that have been uploaded</p>
+
+<ul>
+    <li> <img src="{{ url_for('get_image') }}"></li>
+</ul>
+
+
+
+{% endblock %}
