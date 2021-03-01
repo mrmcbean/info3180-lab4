@@ -23,12 +23,12 @@ def get_uploaded_images():
     rootdir = os.getcwd()
     print (rootdir)
 
-    for subdir,dirs, files in os.walk(rootdir + '/uploads'):
+    for subdir,dirs, files in os.walk(rootdir + 'app/uploads'):
         for file in files:
             print (os.path.join(subdir,file))
-            dirs = subdir + os.sep + file
+            dirs = subdir + os.path.sep + file
 
             if dirs.endswith(".jpg", "png"):
-                print(dirs)
+                print([file])
 
             

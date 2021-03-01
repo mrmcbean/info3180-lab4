@@ -10,6 +10,7 @@ from flask import render_template, request, redirect, url_for, flash, session, a
 from werkzeug.utils import secure_filename
 
 from .forms import PhotoForm
+from flask import send_from_directory
 
 
 ###
@@ -53,7 +54,7 @@ def upload():
 
     return render_template('upload.html', form=photoform)
 
-@app.route("/uploads/<filename>")
+@app.route('/uploads/<filename>')
 def get_image(filename):
     root_dir=os.getcwd()
     
